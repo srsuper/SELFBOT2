@@ -1366,10 +1366,10 @@ def bot(op):
                         if msg_dict1[msg_id]["from"]:
                                 ginfo = dhenzaSelfbot.getGroup(at)
                                 ryan = dhenzaSelfbot.getContact(msg_dict1[msg_id]["from"])
-                                ret_ =  "📧 Sticker Dihapus 📧\n"
-                                ret_ += " Pengirim : {}".format(str(ryan.displayName))
-                                ret_ += "\n Nama Grup : {}".format(str(ginfo.name))
-                                ret_ += "\n Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
+                                ret_ =  "📧 ตรวจพบ!!ยกเลิก สติ๊กเกอร์ 📧\n"
+                                ret_ += " LineID : {}".format(str(ryan.displayName))
+                                ret_ += "\n Name Group : {}".format(str(ginfo.name))
+                                ret_ += "\n เวลา : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
                                 ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
                                 dhenzaSelfbot.sendMessage(at, str(ret_))
                                 dhenzaSelfbot.sendImage(at, msg_dict1[msg_id]["data"])
@@ -2273,12 +2273,12 @@ def bot(op):
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
                                 ret_ += "TBP INFO GROUP\n"
-                                ret_ += "\nNama Group : {}".format(G.name)
+                                ret_ += "\nName Group : {}".format(G.name)
                                 ret_ += "\nID Group : {}".format(G.id)
-                                ret_ += "\nPembuat : {}".format(gCreator)
-                                ret_ += "\nWaktu Dibuat : {}".format(str(timeCreated))
-                                ret_ += "\nJumlah Member : {}".format(str(len(G.members)))
-                                ret_ += "\nJumlah Pending : {}".format(gPending)
+                                ret_ += "\nผู้สร้าง : {}".format(gCreator)
+                                ret_ += "\nวัน/เวลา ก่อตั้ง : {}".format(str(timeCreated))
+                                ret_ += "\nจำนวนสมาชิก : {}".format(str(len(G.members)))
+                                ret_ += "\nกำลังเชิญ : {}".format(gPending)
                                 ret_ += "\nGroup Qr : {}".format(gQr)
                                 ret_ += "\nGroup Ticket : {}".format(gTicket)
                                 ret_ += ""
