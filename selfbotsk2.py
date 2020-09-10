@@ -323,7 +323,7 @@ mulai = time.time()
 msg_dict = {}
 msg_dict1 = {}
 
-tz = pytz.timezone("Asia/Jakarta")
+tz = pytz.timezone("Asia/Bangkok")
 timeNow = datetime.now(tz=tz)
 
 def download_page(url):
@@ -678,7 +678,7 @@ def help():
     num = (num+1)
     helpMessage += "│ " + " │ %i)" % num + key +  " Changedualurl: url\n"
     num = (num+1)
-    helpMessage += "│ " + " │ %i)" % num + key +  " Mention\n"
+    helpMessage += "│ " + " │ %i)" % num + key +  " Tag\n"
     num = (num+1)
     helpMessage += "│ " + " │ %i)" % num + key + " Rname\n"
     num = (num+1)
@@ -1347,11 +1347,11 @@ def bot(op):
                            else:
                                 ginfo = dhenzaSelfbot.getGroup(at)
                                 ryan = dhenzaSelfbot.getContact(msg_dict[msg_id]["from"])
-                                ret_ =  "📧 Pesan Dihapus 📧\n"
-                                ret_ += " Pengirim : {}".format(str(ryan.displayName))
-                                ret_ += "\n Nama Grup : {}".format(str(ginfo.name))
-                                ret_ += "\n Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
-                                ret_ += "\n Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
+                                ret_ =  "📧 ตรวจพบ!!ยกเลิกข้อความ 📧\n"
+                                ret_ += " LineID : {}".format(str(ryan.displayName))
+                                ret_ += "\n Name Group : {}".format(str(ginfo.name))
+                                ret_ += "\n เวลา : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
+                                ret_ += "\n ข้อความว่า!! : {}".format(str(msg_dict[msg_id]["text"]))
                                 dhenzaSelfbot.sendMessage(at, str(ret_))
                         del msg_dict[msg_id]
                 except Exception as e:
